@@ -19,12 +19,12 @@ client.on('guildMemberAdd', member => {
     var channel = member.guild.channels.find("name", "karşılama-odası");
     if (!channel) return;
 
-    var role = member.guild.roles.find("name", "üye");
+    var role = member.guild.roles.find("name", "Üye");
     if(!role) return;
     member.addRole(role);
     const msg = new Discord.RichEmbed()
         .setColor('RANDOM')
-        .setAuthor("Hoşgeldin" + member.user.username)
+        .setAuthor("Hoşgeldin" + member.user.username, member.user.avatarURL)
         .setThumbnail(member.user.avatarURL)
         .setTitle('❤️ | Aramıza Hoşgeldin')
         .setTimestamp()
