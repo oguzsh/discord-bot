@@ -1,43 +1,27 @@
 const Discord = require("discord.js");
 
-exports.run = async (client, message, args, level) => { // eslint-disable-line no-unused-vars
-    const code = args.join(" ");
+exports.run = async (bot, message, args, color, prefix) => {
+    if (message.author.id !== '294910526163517441') return;
     try {
-        const evaled = eval(code);
-        const clean = await client.clean(client, evaled);
-        if (code) {
-            const embed = new Discord.RichEmbed()
-                .setAuthor(`${message.author.tag}`, message.author.avatarURL)
-                .setColor("RANDOM")
-                .addField("Input\⬇", `${code}`)
-                .addField("Output\⬇", `\`\`\`js\n${clean}\n\`\`\``)
-            message.channel.send({
-                embed
-            });
-        } else {
-            const embed = new Discord.RichEmbed()
-                .setAuthor(`${message.author.tag}`, message.author.avatarURL)
-                .setColor("RANDOM")
-                .addField("Code", `none`)
-                .addField("Output", `\`\`\`js\n${clean}\n\`\`\``)
-            message.channel.send({
-                embed
-            });
-        }
-    } catch (err) {
-        message.channel.send(`\`ERROR\` \`\`\`xl\n${await client.clean(client, err)}\n\`\`\``);
-    }
-};
+        let codein = args.join(" ");
+        let code = eval(codein);
 
-exports.conf = {
-    enabled: true,
-    guildOnly: false,
-    aliases: [],
-    permLevel: 0
-};
+        if (typeof code !== 'string')
+            code = require('util').inspect(code, {
+                depth: 0
+            });
+        let embed = new Discord.RichEmbed()
+            .setAuthor('Evaluate')
+            .setColor('RANDOM')
+            .addField(':inbox_tray: Input', `\`\`\`js\n${codein}\`\`\``)
+            .addField(':outbox_tray: Output', `\`\`\`js\n${code}\n\`\`\``)
+        message.channel.send(embed)
+    } catch (e) {
+        message.channel.send(`\`\`\`js\n${e}\n\`\`\``);
+    }
+}
 
 exports.help = {
-    name: "eval",
-    description: "Evaluates arbitrary javascript.",
-    usage: "eval [...code]"
-};
+    name: 'eval',
+    category: 'Polis'
+}
