@@ -29,7 +29,7 @@ client.on('guildMemberAdd', member => {
 
 /////////////////////// Auto Role Remove ///////////////////////
 client.on('guildMemberRemove', member => {
-    const channel = member.guild.channels.find('name', 'karşılama-odası');
+    const channel = member.guild.channels.find('name', 'log');
     if (!channel) return;
     const embed = new Discord.RichEmbed()
         .setColor('RANDOM')
