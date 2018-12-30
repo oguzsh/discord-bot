@@ -21,7 +21,16 @@ exports.run = async (bot, message, args, color, prefix) => {
     }
 }
 
+exports.conf = {
+    enabled: true,
+    guildOnly: false,
+    aliases: [],
+    permLevel: 0
+};
+
 exports.help = {
     name: 'eval',
-    category: 'Polis'
+    category: 'Polis',
+    description: 'Eval func',
+    usage: 'eval [code]'
 }
