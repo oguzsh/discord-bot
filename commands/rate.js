@@ -10,7 +10,6 @@ exports.run = async (client, message, args) => {
         .setAuthor('Oylama Başladı')
         .setTitle(`Oylama tarafından ${message.author.username} başlatıldı`)
         .setColor(3447003)
-        .setDescription(`${mesaj} \n\n\ Evet İçin: :thumbsup: Hayır İçin: :thumbsdown: `);
 
         let msg = await message.channel.send(embed)
             .then(function (msg) {
