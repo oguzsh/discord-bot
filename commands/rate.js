@@ -1,12 +1,12 @@
 const Discord = require('discord.js');
 
-exports.run = (client, message, args) => {
+exports.run = async (client, message, args) => {
     let mesaj = args.slice(0).join(' ');
-    if (mesaj.length < 1) return message.reply('Neyi oylayacaksın onu da yaz :/');
+    if (mesaj.length < 1) return message.reply('Hata! Doğru kullanım : !oylama [konu]');
     message.delete();
 
     const embed = new Discord.RichEmbed()
-    .setColor("#ffffff")
+        .setColor("#ffffff")
         .setAuthor('Oylama Başladı')
         .setTitle(`Oylama tarafından ${message.author.username} başlatıldı`)
         .setColor(3447003)

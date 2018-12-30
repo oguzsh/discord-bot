@@ -5,7 +5,7 @@ const generator = require('generate-password');
 exports.run = function(client, message, args) {
     var uzunluk = args.slice(0).join(' ');
 
-    if (!uzunluk) return message.reply('Bir uzunluk belirt. **Doğru Kullanım**: l!şifre <uzunluk>')
+    if (!uzunluk) return message.reply('Bir uzunluk belirt. **Doğru Kullanım**: !şifre <uzunluk>')
 
 
 

@@ -5,7 +5,7 @@ exports.run = (client, message, args) => {
       .setColor(0xFF0000)
       .setTimestamp()
       .setAuthor(message.author.username, message.author.avatarURL)
-      .addField(':warning: Uyarı :warning:', '`kick` adlı komutu özel mesajlarda kullanamazsın.')
+      .addField(':warning: Uyarı :warning:', '`ban` adlı komutu özel mesajlarda kullanamazsın.')
     return message.author.sendEmbed(ozelmesajuyari);
   }
   let guild = message.guild
@@ -13,8 +13,8 @@ exports.run = (client, message, args) => {
   let user = message.mentions.users.first();
   let modlog = guild.channels.find('name', 'log');
   if (!modlog) return message.reply(':warning: **Uyarı** :warning:', '`log` **adlı Kanal Bulunamadı!**');
-  if (reason.length < 1) return message.reply('Kimi ne sebeple sürgün edeyim onu yaz :P');
-  if (message.mentions.users.size < 1) return message.reply('Kimi sürgün edeyim ?').catch(console.error);
+  if (reason.length < 1) return message.reply('Kimi ne sebeple sürgün edeyim onu yaz :P, Kullanım: !ban [kişi] [sebep]');
+  if (message.mentions.users.size < 1) return message.reply('Kimi sürgün edeyim ?, Kullanım: !ban [kişi] [sebep]').catch(console.error);
 
   if (!message.guild.member(user).kickable) return message.reply('Yetkilileri sunucudan banlayamam.');
   message.guild.member(user).ban();

@@ -18,7 +18,7 @@ exports.run = (client, message) => {
 
 
         if (result === undefined || result.length === 0) {
-            message.channel.send('**Geçerli bir konum belirt.**')
+            message.channel.send('**Geçerli bir konum belirt. Kullanım: !hava [konum]** ')
             return;
         }
         var current = result[0].current;
