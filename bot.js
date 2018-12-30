@@ -22,8 +22,8 @@ client.on('guildMemberAdd', member => {
     var role = member.guild.roles.find("name", "Üye");
     if(!role) return;
     member.addRole(role);
-    channel.sendEmbed(member + " aramıza hoşgeldin <3");
-    channel.sendEmbed(member + "sohbete katılmak için #sohbet kanalına gidebilirsin n_n");
+    channel.send(member + " aramıza hoşgeldin <3");
+    channel.send(member + "sohbete katılmak için #sohbet kanalına gidebilirsin n_n");
 });
 /////////////////////// Auto Role ///////////////////////
 
