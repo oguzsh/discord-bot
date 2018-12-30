@@ -19,9 +19,9 @@ client.on('guildMemberAdd', member => {
     var channel = member.guild.channels.find("name", "karşılama-odası");
     if (!channel) return;
 
-    var role = member.guild.roles.find("name", "Üye");
-    if(!role) return;
-    member.addRole(role);
+    var role = member.guild.roles.find("name", "Muted");
+    member.addRole(role).catch(console.error);
+    
     channel.send(member + " aramıza " + role + " rolünde hoşgeldin <3");
     channel.send(member + " sohbete katılmak için #sohbet kanalına gidebilirsin n_n");
 });
