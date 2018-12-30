@@ -8,7 +8,7 @@ exports.run = (client, message, params) => {
         .setTitle("Komutlar")
         .setDescription('')
         .setColor(0x00ffff)
-        .addField("**» Kullanıcı Komutları**", `!report = İstediğiniz Kullanıcıyı Reportlarsınız. \n!sunucubilgi = Bulunduğunuz Sunucu Hakkında Bilgi Verir.\n!hava = Hava durumu bilgisini verir\n!oylama = Oylama başlatır.`)
+        .addField("**» Kullanıcı Komutları**", `!report = İstediğiniz Kullanıcıyı Reportlarsınız. \n!sunucubilgi = Bulunduğunuz Sunucu Hakkında Bilgi Verir.\n!hava = Hava durumu bilgisini verir\n!oylama = Oylama başlatır.\n!cat = Rastgele kedi resimi getirir`)
         .addField("**» Sunucu Yetkilisi Komutları**", `\n!ban = İstediğiniz Kişiyi Sunucudan Banlar. \n!kick  = İstediğiniz Kişiyi Sunucudan Atar.  \n!sustur = İstediğiniz Kişiyi Susturur. \n!temizle = Belirtilen Miktarda Mesajı Silir. (MAX 100)`)
         .addField("**» Botun Ana Komutları**", "!yardım = BOT Komutlarını Atar.")
         .setFooter('Goygoy.sh BOT [ Beta ]')
@@ -28,7 +28,7 @@ exports.run = (client, message, params) => {
 exports.conf = {
     enabled: true,
     guildOnly: false,
-    aliases: ['h', 'halp', 'help', 'y','yardim'],
+    aliases: ['h', 'help', 'help', 'y','yardim'],
     permLevel: 0
 };
 
