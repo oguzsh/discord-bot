@@ -19,7 +19,7 @@ client.on('guildMemberAdd', member => {
     var channel = member.guild.channels.find("name", "karşılama-odası");
     if (!channel) return;
 
-    var role = member.guild.roles.find("name", "Uye");
+    var role = member.guild.roles.find("name", "Üye");
     member.addRole(role).catch(console.error);
 
     channel.send(member + " aramıza hoşgeldin ❤️");
