@@ -31,18 +31,5 @@
     "weather.js": "^0.1.0",
     "winston": "^3.1.0",
     "ytdl-core": "^0.26.1"
-  },
-
-   "now": {
-    "name": "goygoybot",
-    "alias": "app2",
-    "type": "npm",
-    "engines": {
-      "node": "4.7.2"
-    },
-    "env": {
-      "NODE_ENV": "production",
-      "PORT": "3001"
-    }
   }
 }

@@ -13,24 +13,23 @@ const log = message => {
     console.log(`[${moment().format('YYYY-MM-DD HH:mm:ss')}] ${message}`);
 };
 
+
+/////////////////////// Auto Role ///////////////////////
 client.on('guildMemberAdd', member => {
-    let guild = member.guild;
-    let joinRole = guild.roles.find('name', 'Üye');
-    member.addRole(joinRole);
-
-    const channel = member.guild.channels.find('name', 'log');
+    var channel = member.guild.channels.find("name", "karşılama-odası");
     if (!channel) return;
-    const embed = new Discord.RichEmbed()
-        .setColor('RANDOM')
-        .setAuthor(member.user.username, member.user.avatarURL)
-        .setThumbnail(member.user.avatarURL)
-        .setTitle('📥 | Sunucuya katıldı!')
-        .setTimestamp()
-    channel.sendEmbed(embed);
-});
 
+    var role = member.guild.roles.find("name", "Üye");
+    if(!role) return;
+    member.addRole(role);
+    channel.sendEmbed(member + " aramıza hoşgeldin <3");
+    channel.sendEmbed(member + "sohbete katılmak için #sohbet kanalına gidebilirsin n_n");
+});
+/////////////////////// Auto Role ///////////////////////
+
+/////////////////////// Auto Role Remove ///////////////////////
 client.on('guildMemberRemove', member => {
-    const channel = member.guild.channels.find('name', 'log');
+    const channel = member.guild.channels.find('name', 'sohbet');
     if (!channel) return;
     const embed = new Discord.RichEmbed()
         .setColor('RANDOM')
@@ -40,9 +39,10 @@ client.on('guildMemberRemove', member => {
         .setTimestamp()
     channel.sendEmbed(embed);
 });
+/////////////////////// Auto Role Remove ///////////////////////
 
 
-
+/////////////////////// Commands ///////////////////////
 client.commands = new Discord.Collection();
 client.aliases = new Discord.Collection();
 fs.readdir('./commands/', (err, files) => {
@@ -55,7 +55,7 @@ fs.readdir('./commands/', (err, files) => {
         });
     });
 });
-
+/////////////////////// Commands ///////////////////////
 
 
 
