@@ -19,17 +19,22 @@ client.on('guildMemberAdd', member => {
     var channel = member.guild.channels.find("name", "karşılama-odası");
     if (!channel) return;
 
-    var role = member.guild.roles.find("name", "Üye");
+    var role = member.guild.roles.find("name", "üye");
     if(!role) return;
     member.addRole(role);
-    channel.send(member + " aramıza hoşgeldin <3");
-    channel.send(member + "sohbete katılmak için #sohbet kanalına gidebilirsin n_n");
+    const msg = new Discord.RichEmbed()
+        .setColor('RANDOM')
+        .setAuthor("Hoşgeldin" + member.user.username)
+        .setThumbnail(member.user.avatarURL)
+        .setTitle('❤️ | Aramıza Hoşgeldin')
+        .setTimestamp()
+    channel.sendEmbed(msg);
 });
 /////////////////////// Auto Role ///////////////////////
 
 /////////////////////// Auto Role Remove ///////////////////////
 client.on('guildMemberRemove', member => {
-    const channel = member.guild.channels.find('name', 'sohbet');
+    const channel = member.guild.channels.find('name', 'karşılama-odası');
     if (!channel) return;
     const embed = new Discord.RichEmbed()
         .setColor('RANDOM')
