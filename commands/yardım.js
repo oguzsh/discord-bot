@@ -28,12 +28,12 @@ exports.run = (client, message, params) => {
 exports.conf = {
     enabled: true,
     guildOnly: false,
-    aliases: ['h', 'halp', 'help', 'y'],
+    aliases: ['h', 'halp', 'help', 'y','yardim'],
     permLevel: 0
 };
 
 exports.help = {
     name: 'yardım',
     description: 'Tüm komutları gösterir.',
-    usage: 'yardım [komut]'
+    usage: 'yardim [komut]'
 };
