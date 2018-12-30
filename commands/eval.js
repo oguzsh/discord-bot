@@ -33,12 +33,11 @@ exports.conf = {
     enabled: true,
     guildOnly: false,
     aliases: [],
-    permLevel: "0"
+    permLevel: 0
 };
 
 exports.help = {
     name: "eval",
-    category: "Owner",
     description: "Evaluates arbitrary javascript.",
     usage: "eval [...code]"
 };
