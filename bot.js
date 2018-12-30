@@ -19,10 +19,10 @@ client.on('guildMemberAdd', member => {
     var channel = member.guild.channels.find("name", "karşılama-odası");
     if (!channel) return;
 
-    var role = member.guild.roles.find("name", "Muted");
+    var role = member.guild.roles.find("name", "Uye");
     member.addRole(role).catch(console.error);
-    
-    channel.send(member + " aramıza " + role + " rolünde hoşgeldin <3");
+
+    channel.send(member + " aramıza hoşgeldin ❤️");
     channel.send(member + " sohbete katılmak için #sohbet kanalına gidebilirsin n_n");
 });
 /////////////////////// Auto Role ///////////////////////
