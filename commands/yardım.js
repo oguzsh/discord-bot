@@ -8,7 +8,7 @@ exports.run = (client, message, params) => {
         .setTitle("Komutlar")
         .setDescription('')
         .setColor(0x00ffff)
-        .addField("**» Kullanıcı Komutları**", `!report = İstediğiniz Kullanıcıyı Reportlarsınız. \n!sunucubilgi = Bulunduğunuz Sunucu Hakkında Bilgi Verir.\n!hava = Hava durumu bilgisini verir\n!oylama = Oylama başlatır.\n!cat = Rastgele kedi resimi getirir\n!ascii = Ascii tarzında yazar`)
+        .addField("**» Kullanıcı Komutları**", `!report = İstediğiniz Kullanıcıyı Reportlarsınız. \n!sunucubilgi = Bulunduğunuz Sunucu Hakkında Bilgi Verir.\n!hava = Hava durumu bilgisini verir\n!oylama = Oylama başlatır.\n!cat = Rastgele kedi resimi getirir\n!ascii = Ascii tarzında yazar\n!google = Arama yapmanızı sağlar\n!gif = Random gif oluşturur`)
         .addField("**» Sunucu Yetkilisi Komutları**", `\n!ban = İstediğiniz Kişiyi Sunucudan Banlar. \n!kick  = İstediğiniz Kişiyi Sunucudan Atar.  \n!sustur = İstediğiniz Kişiyi Susturur. \n!temizle = Belirtilen Miktarda Mesajı Silir. (MAX 100)`)
         .addField("**» Botun Ana Komutları**", "!yardım = BOT Komutlarını Atar.")
         .setFooter('Goygoy.sh BOT [ Beta ]')
