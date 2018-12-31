@@ -9,6 +9,8 @@ exports.run = (client, message) => {
     axios.get(URL)
         .then(function (response) {
             console.log(response.data);
+            console.log("------------------------------------------------------------");
+            console.log(response.data.images);
         })
         .catch(function (error){
             console.error(error)
