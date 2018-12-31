@@ -3,7 +3,7 @@ const ayarlar = require("../settings.json");
 const red = ayarlar.red;
 const green = ayarlar.green;
 const orange = ayarlar.orange;
-const errors = require("../hatalar/hata.js");
+const errors = require("../errors/error.js");
 
 exports.run = function(client, message, args) {
     message.delete();
