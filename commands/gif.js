@@ -8,7 +8,7 @@ const URL = `http://api.giphy.com/v1/gifs/random?api_key=${ayarlar.giphy_api}`;
 exports.run = (client, message) => {
     axios.get(URL)
         .then(function (response) {
-            console.log(response.data.images.original.url);
+            console.log(response.data);
         })
         .catch(function (error){
             console.error(error)
