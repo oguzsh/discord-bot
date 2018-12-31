@@ -8,7 +8,7 @@ exports.run = (client, message) => {
         message.channel.send({
             embed: {
                 color: 0x36393F,
-                description: `:warning: **${message.author.username}**, Aramam için birşeyler yazmalısın. \n!!google \`'aramak istediğiniz'\``,
+                description: `:warning: **${message.author.username}**, Aramam için birşeyler yazmalısın. \n!google \`'aramak istediğiniz'\``,
                 footer: {
                     text: 'Google Arama',
                 }
