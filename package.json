@@ -9,7 +9,6 @@
   "author": "oguzsh",
   "license": "ISC",
   "dependencies": {
-    "axios": "^0.18.0",
     "cat-names": "^2.0.0",
     "chalk": "^2.3.0",
     "cheerio": "^1.0.0-rc.2",
@@ -21,6 +20,7 @@
     "figlet": "^1.2.1",
     "fs": "0.0.1-security",
     "generate-password": "^1.4.0",
+    "giphy-api": "^2.0.1",
     "google": "^2.1.0",
     "jimp": "^0.5.3",
     "math-expression-evaluator": "^1.2.17",
