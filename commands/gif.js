@@ -8,7 +8,12 @@ const URL = `http://api.giphy.com/v1/gifs/random?api_key=${ayarlar.giphy_api}`;
 exports.run = (client, message) => {
     axios.get(URL)
         .then(function (response) {
-            console.log(response.data);
+             let random_gif = new Discord.RichEmbed()
+                 .setColor("#7289DA")
+                 .setTitle("Random Gif! ")
+                 .setImage(response.data.image_url);
+
+                message.channel.send(random_gif);
         })
         .catch(function (error){
             console.error(error)
