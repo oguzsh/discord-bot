@@ -1,6 +1,6 @@
 {
     "prefix": "!",
-    "sahip": "528581761391919105",
-    "token": "NTI4NTgxNzYxMzkxOTE5MTA1.DwkYOg.uqFDWuPGTrGy1pfuBUQv1CfmIiI",
-    "giphy_api": "WfLCqVCix1GhdMVzEmsHyfqHlMuLyOQa"
+    "sahip": "{ YOUR_CLIENT_ID }",
+    "token": "{ YOUR_TOKEN }",
+    "giphy_api": "{ YOUR_GIPHY_API }"
 }
