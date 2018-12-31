@@ -2,10 +2,11 @@
 
 const Discord = require(`discord.js`);
 const ayarlar = require('../settings.json');
+const axios = require('axios');
 const URL = `http://api.giphy.com/v1/gifs/random?api_key=${ayarlar.giphy_api}`;
 
 exports.run = (client, message) => {
-    fetch(URL)
+    axios.get(URL)
         .then(function (response) {
             console.log(data);
         })
