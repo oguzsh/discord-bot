@@ -24,7 +24,7 @@
     "google": "^2.1.0",
     "jimp": "^0.5.3",
     "math-expression-evaluator": "^1.2.17",
-    "moment": "^2.22.2",
+    "moment": "^2.29.2",
     "moment-duration-format": "^1.3.0",
     "ms": "^2.0.0",
     "pokedex-api": "^1.1.1",
